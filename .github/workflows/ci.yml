@@ -16,6 +16,9 @@ jobs:
       # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
 
       # Step 2: Setup Python
       - name: Setup Python
@@ -52,9 +55,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
           mkdir -p data
           mv results/processed_results.csv data/processed_results.csv
+
           git add data/processed_results.csv
           git commit -m "Update metrics CSV [skip ci]" || echo "No changes to commit"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
 
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
