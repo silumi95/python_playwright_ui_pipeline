@@ -1,4 +1,4 @@
-name: dashboard-ci
+# name: dashboard-ci
 
 on:
   schedule:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -38,9 +38,20 @@ jobs:
       - name: Process Metrics
         run: python process_metrics.py
 
-      # Step 6: Upload CSV artifact
+      # Step 6: Upload CSV artifact (optional)
       - name: Upload Metrics CSV
         uses: actions/upload-artifact@v4
         with:
           name: metrics
           path: results/processed_results.csv
+
+      # Step 7: Commit processed CSV to repo for Power BI
+      - name: Commit metrics CSV
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p data
+          mv results/processed_results.csv data/processed_results.csv
+          git add data/processed_results.csv
+          git commit -m "Update metrics CSV [skip ci]" || echo "No changes to commit"
+          git push
