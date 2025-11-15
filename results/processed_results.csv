@@ -1,0 +1,17 @@
+name,status,duration_ms,error
+tests/test_1login_ui.py::test_valid_login,failed,2757,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
+tests/test_cart_ui.py::test_add_item_to_cart,failed,1882,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
+tests/test_logout_ui.py::test_logout_after_login,failed,1883,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
+tests/test_negative_ui.py::test_invalid_credentials,failed,1908,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
+tests/test_negative_ui.py::test_empty_fields,passed,792,
+tests/test_negative_ui.py::test_locked_out_user,failed,468,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
