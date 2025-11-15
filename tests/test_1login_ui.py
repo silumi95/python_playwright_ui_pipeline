@@ -6,7 +6,7 @@ from utils.test_utils import capture_screenshot
 def test_valid_login():
     """Test valid login with standard_user"""
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.saucedemo.com/", timeout=30000)
 

@@ -5,7 +5,7 @@ from utils.test_utils import capture_screenshot
 def test_add_item_to_cart():
     """Test adding one item to cart"""
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.saucedemo.com/", timeout=40000)
         page.fill("#user-name", "standard_user")
