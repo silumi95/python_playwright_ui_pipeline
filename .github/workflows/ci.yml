@@ -45,8 +45,10 @@ jobs:
           name: metrics
           path: results/processed_results.csv
 
-      # Step 7: Commit processed CSV to repo for Power BI
+           # Step 7: Commit metrics CSV to repo for Power BI
       - name: Commit metrics CSV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -54,4 +56,5 @@ jobs:
           mv results/processed_results.csv data/processed_results.csv
           git add data/processed_results.csv
           git commit -m "Update metrics CSV [skip ci]" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
+
