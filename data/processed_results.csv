@@ -1,7 +1,7 @@
 name,status,duration_ms,error
-tests/test_1login_ui.py::test_valid_login,passed,5507,
-tests/test_cart_ui.py::test_add_item_to_cart,passed,880,
-tests/test_logout_ui.py::test_logout_after_login,passed,1777,
-tests/test_negative_ui.py::test_invalid_credentials,passed,800,
-tests/test_negative_ui.py::test_empty_fields,passed,808,
-tests/test_negative_ui.py::test_locked_out_user,passed,807,
+tests/test_1login_ui.py::test_valid_login,passed,4678,
+tests/test_cart_ui.py::test_add_item_to_cart,passed,794,
+tests/test_logout_ui.py::test_logout_after_login,passed,1697,
+tests/test_negative_ui.py::test_invalid_credentials,passed,718,
+tests/test_negative_ui.py::test_empty_fields,passed,692,
+tests/test_negative_ui.py::test_locked_out_user,passed,727,
