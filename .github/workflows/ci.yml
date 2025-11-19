@@ -10,13 +10,12 @@ on:
     branches:
       - main
   workflow_dispatch:
-
 jobs:
   ui-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
+      # Step 1: Checkout repository WITH proper credentials
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -51,28 +50,23 @@ jobs:
           name: metrics
           path: results/processed_results.csv
 
-      # Step 7: Append results to history.csv
+      # Step 7: Commit metrics CSV back to repo
       - name: Append results to history file
         run: |
           mkdir -p data
           if [ ! -f data/history.csv ]; then
+            # Create history file with header on first run
             cp results/processed_results.csv data/history.csv
           else
+            # Append without header
             tail -n +2 results/processed_results.csv >> data/history.csv
           fi
 
-      # Step 8: Save per-run CSV for Power BI
-      - name: Save per-run CSV
-        run: |
-          mkdir -p data
-          csv_name="history_${GITHUB_RUN_NUMBER}.csv"
-          cp results/processed_results.csv data/$csv_name
-
-      # Step 9: Commit and push all CSVs
-      - name: Commit CSVs
+      - name: Commit history file
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/history.csv data/history_*.csv
-          git commit -m "Add latest execution CSVs [skip ci]" || echo "No changes"
+          git add data/history.csv
+          git commit -m "Append latest execution to history [skip ci]" || echo "No changes"
           git push origin HEAD:main
+#end
