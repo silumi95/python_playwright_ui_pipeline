@@ -21,3 +21,9 @@ tests/test_negative_ui.py::test_empty_fields,passed,792,
 tests/test_negative_ui.py::test_locked_out_user,failed,468,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
 Call log:
   - navigating to ""https://www.saucedemo.com/"", waiting until ""load"""
+31,2025-11-19 10:32:05,tests/test_1login_ui.py::test_valid_login,passed,2656,
+31,2025-11-19 10:32:05,tests/test_cart_ui.py::test_add_item_to_cart,passed,919,
+31,2025-11-19 10:32:05,tests/test_logout_ui.py::test_logout_after_login,passed,1792,
+31,2025-11-19 10:32:05,tests/test_negative_ui.py::test_invalid_credentials,passed,859,
+31,2025-11-19 10:32:05,tests/test_negative_ui.py::test_empty_fields,passed,829,
+31,2025-11-19 10:32:05,tests/test_negative_ui.py::test_locked_out_user,passed,876,
