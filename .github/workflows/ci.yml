@@ -52,12 +52,21 @@ jobs:
           path: results/processed_results.csv
 
       # Step 7: Commit metrics CSV back to repo
-      - name: Commit metrics CSV
+      - name: Append results to history file
+        run: |
+          mkdir -p data
+          if [ ! -f data/history.csv ]; then
+            # Create history file with header on first run
+            cp results/processed_results.csv data/history.csv
+          else
+            # Append without header
+            tail -n +2 results/processed_results.csv >> data/history.csv
+          fi
+
+      - name: Commit history file
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p data
-          mv results/processed_results.csv data/processed_results.csv
-          git add data/processed_results.csv
-          git commit -m "Update metrics CSV [skip ci]" || echo "No changes"
+          git add data/history.csv
+          git commit -m "Append latest execution to history [skip ci]" || echo "No changes"
           git push
