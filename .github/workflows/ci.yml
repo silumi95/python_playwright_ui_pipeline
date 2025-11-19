@@ -7,15 +7,15 @@ on:
   schedule:
     - cron: "0 */6 * * *"  # every 6 hours
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
+
 jobs:
   ui-tests:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository WITH proper credentials
+      # Step 1: Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -35,38 +35,43 @@ jobs:
           pip install -r requirements.txt
           playwright install
 
-      # Step 4: Run UI tests
+      # Step 4: Run UI tests (Playwright)
       - name: Run Playwright UI Tests
         run: pytest --json-report --json-report-file=results/latest.json
 
-      # Step 5: Process Metrics
+      # Step 5: Process metrics + attach screenshot URLs
       - name: Process Metrics
         run: python process_metrics.py
 
-      # Step 6: Upload CSV artifact
-      - name: Upload Metrics CSV
-        uses: actions/upload-artifact@v4
-        with:
-          name: metrics
-          path: results/processed_results.csv
-
-      # Step 7: Commit metrics CSV back to repo
-      - name: Append results to history file
+      # Step 6: Append to history CSV (all runs)
+      - name: Append results to history
         run: |
           mkdir -p data
           if [ ! -f data/history.csv ]; then
-            # Create history file with header on first run
             cp results/processed_results.csv data/history.csv
           else
-            # Append without header
             tail -n +2 results/processed_results.csv >> data/history.csv
           fi
 
-      - name: Commit history file
+      # Step 7: Save per-run CSV for Option B
+      - name: Save per-run CSV
+        run: |
+          mkdir -p data
+          csv_name="history_${GITHUB_RUN_NUMBER}.csv"
+          cp results/processed_results.csv data/$csv_name
+
+      # Step 8: Upload screenshots artifact
+      - name: Upload Screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: results/screenshots
+
+      # Step 9: Commit all CSVs + screenshots
+      - name: Commit CSVs and Screenshots
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/history.csv
-          git commit -m "Append latest execution to history [skip ci]" || echo "No changes"
+          git add data/*.csv results/screenshots/*.png || echo "nothing to add"
+          git commit -m "Add history CSVs + screenshots [skip ci]" || echo "No changes"
           git push origin HEAD:main
-#end
