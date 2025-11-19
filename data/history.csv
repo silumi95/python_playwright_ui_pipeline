@@ -1,0 +1,7 @@
+build_number,execution_time,name,status,duration_ms,error
+25,2025-11-19 09:13:33,tests/test_1login_ui.py::test_valid_login,passed,1473,
+25,2025-11-19 09:13:33,tests/test_cart_ui.py::test_add_item_to_cart,passed,741,
+25,2025-11-19 09:13:33,tests/test_logout_ui.py::test_logout_after_login,passed,1624,
+25,2025-11-19 09:13:33,tests/test_negative_ui.py::test_invalid_credentials,passed,674,
+25,2025-11-19 09:13:33,tests/test_negative_ui.py::test_empty_fields,passed,641,
+25,2025-11-19 09:13:33,tests/test_negative_ui.py::test_locked_out_user,passed,689,
