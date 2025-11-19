@@ -39,7 +39,8 @@ for test in data.get("tests", []):
     })
 
 df = pd.DataFrame(rows)
-df.to_csv("results/processed_results.csv", index=False)
+df.to_csv("results/processed_results.csv", index=False, sep=",", encoding="utf-8-sig")
+
 
 print(df)
 print("\nProcessed results saved to results/processed_results.csv")
