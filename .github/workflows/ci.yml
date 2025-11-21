@@ -60,6 +60,8 @@ jobs:
       # 6️⃣ Process test metrics
       - name: Process Metrics
         run: python scripts/process_metrics.py
+         echo "Listing results folder after metrics processing:" 
+         ls -la results/ || echo "Results folder empty" # Ensure at least empty files exist touch results/history.csv results/processed_results_build_$(date +%s).csv
 
       # 7️⃣ Commit CSVs + screenshots
       
