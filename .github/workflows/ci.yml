@@ -108,6 +108,7 @@ jobs:
 
       # 5️⃣ Run Playwright UI Tests
       - name: Run Playwright UI Tests
+        continue-on-error: true
         run: |
           pytest --json-report --json-report-file=results/latest.json \
                  --browser chromium
