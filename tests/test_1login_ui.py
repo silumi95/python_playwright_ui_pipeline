@@ -10,3 +10,4 @@ def test_valid_login(page):
     page.fill("#password", "secret_sauce")
     page.click("#login-button")
     assert "inventory" in page.url, "Login failed."
+    # test
