@@ -143,3 +143,4 @@ def pytest_runtest_makereport(item, call):
                 print(f"[ERROR] Failed to take screenshot: {e}")
         else:
             print(f"[WARN] No page fixture available for {item.nodeid}; screenshot skipped.")
+# test
