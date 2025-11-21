@@ -1,50 +1,37 @@
 import os
-import sys
+import time
 import pytest
 
-# -----------------------------------------------------------
-# 1. Ensure project root is in PYTHONPATH (your request)
-# -----------------------------------------------------------
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-if ROOT_DIR not in sys.path:
-    sys.path.append(ROOT_DIR)
-
-# -----------------------------------------------------------
-# 2. Pytest hook to capture screenshots when a test fails
-# -----------------------------------------------------------
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
-    # Run the actual test first
-    outcome = yield
-    report = outcome.get_result()
+# yield to let pytest run other hooks and get the test report
+ outcome = yield
+ report = outcome.get_result()
 
-    # Capture ONLY for failed tests and only at the "call" stage (after execution)
-    if report.when == "call" and report.failed:
 
-        # Get Playwright "page" fixture (only exists for UI tests)
-        page = item.funcargs.get("page", None)
+# Capture screenshot on any failure (setup, call, teardown)
+ if report.failed:
+    page = item.funcargs.get("page", None)
+    print(f"[DEBUG] Test {item.nodeid} failed during {report.when}, page={page}")
 
-        if page:
-            # Ensure screenshot folder exists
-            os.makedirs("results/screenshots", exist_ok=True)
+    if page:
+        screenshots_dir = os.path.abspath("results/screenshots")
+        os.makedirs(screenshots_dir, exist_ok=True)
 
-            # Generate a safe file name
-            filename = (
-                item.nodeid
-                .replace("/", "_")
-                .replace("::", "_")
-                .replace(" ", "_")
-                + ".png"
-            )
+        filename = (
+            f"{int(time.time())}_"
+            + item.nodeid.replace("/", "_")
+                         .replace("::", "_")
+                         .replace(" ", "_")
+            + ".png"
+        )
+        screenshot_path = os.path.join(screenshots_dir, filename)
 
-            screenshot_path = f"results/screenshots/{filename}"
-
-            # Take screenshot
+        try:
             page.screenshot(path=screenshot_path)
-
-            # Store path so process_metrics.py can pick it up
+            print(f"[DEBUG] Screenshot saved: {screenshot_path}")
             report.screenshot_path = screenshot_path
+            call.screenshot_path = screenshot_path
+        except Exception as e:
+            print(f"[ERROR] Failed to take screenshot: {e}")
 
-            # Attach screenshot path to pytest result object (JSON plugin will include it)
-            if hasattr(call, "result"):
-                call.result = screenshot_path

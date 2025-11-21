@@ -1,0 +1,190 @@
+﻿build_number,execution_time,name,status,duration_ms,error,screenshot
+0,2025-11-19 22:29:28,tests/test_1login_ui.py::test_valid_login,passed,4092,,
+0,2025-11-19 22:29:28,tests/test_cart_ui.py::test_add_item_to_cart,passed,1543,,
+0,2025-11-19 22:29:28,tests/test_logout_ui.py::test_logout_after_login,passed,2414,,
+0,2025-11-19 22:29:28,tests/test_negative_ui.py::test_invalid_credentials,passed,1395,,
+0,2025-11-19 22:29:28,tests/test_negative_ui.py::test_empty_fields,passed,1280,,
+0,2025-11-19 22:29:28,tests/test_negative_ui.py::test_locked_out_user,failed,690,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:33:54,tests/test_1login_ui.py::test_valid_login,failed,3365,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:33:54,tests/test_cart_ui.py::test_add_item_to_cart,passed,1662,,
+0,2025-11-19 22:33:54,tests/test_logout_ui.py::test_logout_after_login,failed,863,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:33:54,tests/test_negative_ui.py::test_invalid_credentials,passed,1312,,
+0,2025-11-19 22:33:54,tests/test_negative_ui.py::test_empty_fields,passed,1312,,
+0,2025-11-19 22:33:54,tests/test_negative_ui.py::test_locked_out_user,failed,777,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:37:41,tests/test_1login_ui.py::test_valid_login,failed,3230,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:37:41,tests/test_cart_ui.py::test_add_item_to_cart,passed,1575,,
+0,2025-11-19 22:37:41,tests/test_logout_ui.py::test_logout_after_login,failed,820,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:37:41,tests/test_negative_ui.py::test_invalid_credentials,failed,856,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:37:41,tests/test_negative_ui.py::test_empty_fields,passed,1197,,
+0,2025-11-19 22:37:41,tests/test_negative_ui.py::test_locked_out_user,passed,1464,,
+0,2025-11-19 22:38:39,tests/test_1login_ui.py::test_valid_login,failed,3420,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:38:39,tests/test_cart_ui.py::test_add_item_to_cart,failed,895,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:38:39,tests/test_logout_ui.py::test_logout_after_login,passed,2293,,
+0,2025-11-19 22:38:39,tests/test_negative_ui.py::test_invalid_credentials,passed,1328,,
+0,2025-11-19 22:38:39,tests/test_negative_ui.py::test_empty_fields,failed,838,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-19 22:38:39,tests/test_negative_ui.py::test_locked_out_user,failed,738,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:39:41,tests/test_1login_ui.py::test_valid_login,failed,16409,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:39:41,tests/test_cart_ui.py::test_add_item_to_cart,passed,5122,,
+0,2025-11-20 07:39:41,tests/test_logout_ui.py::test_logout_after_login,passed,2367,,
+0,2025-11-20 07:39:41,tests/test_negative_ui.py::test_invalid_credentials,failed,866,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:39:41,tests/test_negative_ui.py::test_empty_fields,failed,840,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:39:41,tests/test_negative_ui.py::test_locked_out_user,failed,843,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:48:02,tests/test_1login_ui.py::test_valid_login,failed,3385,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:48:02,tests/test_cart_ui.py::test_add_item_to_cart,passed,1413,,
+0,2025-11-20 07:48:02,tests/test_logout_ui.py::test_logout_after_login,passed,2356,,
+0,2025-11-20 07:48:02,tests/test_negative_ui.py::test_invalid_credentials,passed,1362,,
+0,2025-11-20 07:48:02,tests/test_negative_ui.py::test_empty_fields,passed,1225,,
+0,2025-11-20 07:48:02,tests/test_negative_ui.py::test_locked_out_user,failed,834,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:58:53,tests/test_1login_ui.py::test_valid_login,failed,3435,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:58:53,tests/test_cart_ui.py::test_add_item_to_cart,passed,4181,,
+0,2025-11-20 07:58:53,tests/test_logout_ui.py::test_logout_after_login,failed,928,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-20 07:58:53,tests/test_negative_ui.py::test_invalid_credentials,passed,1354,,
+0,2025-11-20 07:58:53,tests/test_negative_ui.py::test_empty_fields,passed,1280,,
+0,2025-11-20 07:58:53,tests/test_negative_ui.py::test_locked_out_user,passed,1291,,
+0,2025-11-21 08:49:56,tests/test_1login_ui.py::test_valid_login,passed,2709,,
+0,2025-11-21 08:49:56,tests/test_cart_ui.py::test_add_item_to_cart,failed,4478,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 08:49:56,tests/test_logout_ui.py::test_logout_after_login,failed,512,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 08:49:56,tests/test_negative_ui.py::test_invalid_credentials,passed,1073,,
+0,2025-11-21 08:49:56,tests/test_negative_ui.py::test_empty_fields,passed,793,,
+0,2025-11-21 08:49:56,tests/test_negative_ui.py::test_locked_out_user,passed,835,,
+0,2025-11-21 09:04:00,tests/test_1login_ui.py::test_valid_login,passed,3168,,
+0,2025-11-21 09:04:00,tests/test_cart_ui.py::test_add_item_to_cart,passed,933,,
+0,2025-11-21 09:04:00,tests/test_logout_ui.py::test_logout_after_login,passed,1863,,
+0,2025-11-21 09:04:00,tests/test_negative_ui.py::test_invalid_credentials,passed,824,,
+0,2025-11-21 09:04:00,tests/test_negative_ui.py::test_empty_fields,failed,502,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:04:00,tests/test_negative_ui.py::test_locked_out_user,passed,818,,
+0,2025-11-21 09:10:27,tests/test_1login_ui.py::test_valid_login,failed,2842,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:10:27,tests/test_cart_ui.py::test_add_item_to_cart,passed,928,,
+0,2025-11-21 09:10:27,tests/test_logout_ui.py::test_logout_after_login,passed,2000,,
+0,2025-11-21 09:10:27,tests/test_negative_ui.py::test_invalid_credentials,passed,910,,
+0,2025-11-21 09:10:27,tests/test_negative_ui.py::test_empty_fields,passed,794,,
+0,2025-11-21 09:10:27,tests/test_negative_ui.py::test_locked_out_user,passed,843,,
+0,2025-11-21 09:29:39,tests/test_1login_ui.py::test_valid_login,failed,7793,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:29:39,tests/test_cart_ui.py::test_add_item_to_cart,passed,5034,,
+0,2025-11-21 09:29:39,tests/test_logout_ui.py::test_logout_after_login,passed,1784,,
+0,2025-11-21 09:29:39,tests/test_negative_ui.py::test_invalid_credentials,passed,825,,
+0,2025-11-21 09:29:39,tests/test_negative_ui.py::test_empty_fields,passed,803,,
+0,2025-11-21 09:29:39,tests/test_negative_ui.py::test_locked_out_user,passed,812,,
+0,2025-11-21 09:31:59,tests/test_1login_ui.py::test_valid_login,failed,2838,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:31:59,tests/test_cart_ui.py::test_add_item_to_cart,passed,1017,,
+0,2025-11-21 09:31:59,tests/test_logout_ui.py::test_logout_after_login,failed,519,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:31:59,tests/test_negative_ui.py::test_invalid_credentials,passed,848,,
+0,2025-11-21 09:31:59,tests/test_negative_ui.py::test_empty_fields,failed,517,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:31:59,tests/test_negative_ui.py::test_locked_out_user,failed,522,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:33:10,tests/test_1login_ui.py::test_valid_login,failed,2838,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:33:10,tests/test_cart_ui.py::test_add_item_to_cart,passed,1017,,
+0,2025-11-21 09:33:10,tests/test_logout_ui.py::test_logout_after_login,failed,519,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:33:10,tests/test_negative_ui.py::test_invalid_credentials,passed,848,,
+0,2025-11-21 09:33:10,tests/test_negative_ui.py::test_empty_fields,failed,517,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 09:33:10,tests/test_negative_ui.py::test_locked_out_user,failed,522,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:22:15,tests/test_1login_ui.py::test_valid_login[chromium],failed,49,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:22:15,tests/test_cart_ui.py::test_valid_login[chromium],failed,42,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:22:15,tests/test_logout_ui.py::test_logout_after_login,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:15,tests/test_negative_ui.py::test_invalid_credentials,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:15,tests/test_negative_ui.py::test_empty_fields,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:15,tests/test_negative_ui.py::test_locked_out_user,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:33,tests/test_1login_ui.py::test_valid_login[chromium],passed,517,,
+0,2025-11-21 10:22:33,tests/test_cart_ui.py::test_valid_login[chromium],passed,415,,
+0,2025-11-21 10:22:33,tests/test_logout_ui.py::test_logout_after_login,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:33,tests/test_negative_ui.py::test_invalid_credentials,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:33,tests/test_negative_ui.py::test_empty_fields,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:22:33,tests/test_negative_ui.py::test_locked_out_user,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:26:49,tests/test_1login_ui.py::test_valid_login[chromium],failed,50,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:26:49,tests/test_cart_ui.py::test_valid_login[chromium],passed,414,,
+0,2025-11-21 10:26:49,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1312,,
+0,2025-11-21 10:26:49,tests/test_negative_ui.py::test_invalid_credentials,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:26:49,tests/test_negative_ui.py::test_empty_fields,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:26:49,tests/test_negative_ui.py::test_locked_out_user,failed,0,"playwright._impl._errors.Error: It looks like you are using Playwright Sync API inside the asyncio loop.
+Please use the Async API instead.",
+0,2025-11-21 10:31:48,tests/test_1login_ui.py::test_valid_login[chromium],passed,384,,
+0,2025-11-21 10:31:48,tests/test_cart_ui.py::test_valid_login[chromium],failed,40,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:31:48,tests/test_logout_ui.py::test_logout_after_login[chromium],failed,44,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:31:48,tests/test_negative_ui.py::test_invalid_credentials[chromium],failed,43,"playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to ""https://www.saucedemo.com/"", waiting until ""load""",
+0,2025-11-21 10:31:48,tests/test_negative_ui.py::test_empty_fields[chromium],passed,310,,
+0,2025-11-21 10:31:48,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,351,,
