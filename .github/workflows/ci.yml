@@ -1,3 +1,63 @@
+# name: dashboard-ci
+
+# permissions:
+#   contents: write
+
+# on:
+#   schedule:
+#     - cron: "0 */6 * * *"  # every 6 hours
+#   push:
+#     branches: [main]
+#   workflow_dispatch:
+
+# jobs:
+#   ui-tests:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       # 1️⃣ Checkout repo
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           fetch-depth: 0
+
+#       # 2️⃣ Setup Python
+#       - name: Setup Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: 3.13
+
+#       # 3️⃣ Install dependencies & pytest-playwright
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install -r requirements.txt
+#           pip install pytest-json-report
+#           pip install pytest-playwright
+#           playwright install  # installs browsers
+
+#       # 4️⃣ Ensure results folders exist
+#       - name: Create results folders
+#         run: |
+#           mkdir -p results/screenshots
+#           mkdir -p data
+
+#       # 5️⃣ Run Playwright UI Tests
+#       - name: Run Playwright UI Tests
+#         run: pytest --json-report --json-report-file=results/latest.json
+
+#       # 6️⃣ Process test metrics & attach GitHub URLs
+#       - name: Process Metrics
+#         run: python scripts/process_metrics.py
+
+#       # 7️⃣ Commit CSVs + screenshots
+#       - name: Commit CSVs & Screenshots
+#         run: |
+#           git config user.name "github-actions[bot]"
+#           git config user.email "github-actions[bot]@users.noreply.github.com"
+#           git add results/history.csv results/processed_results_*.csv results/screenshots/*.png || echo "nothing to add"
+#           git commit -m "Add test results + screenshots [skip ci]" || echo "No changes"
+#           git push origin HEAD:main
 name: dashboard-ci
 
 permissions:
@@ -42,9 +102,19 @@ jobs:
           mkdir -p results/screenshots
           mkdir -p data
 
-      # 5️⃣ Run Playwright UI Tests
+      # 5️⃣ Run Playwright UI Tests (headless browsers + screenshots on failure)
       - name: Run Playwright UI Tests
-        run: pytest --json-report --json-report-file=results/latest.json
+        run: |
+          pytest --json-report --json-report-file=results/latest.json \
+                 --headed \
+                 --browser chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: "0"
+          PWDEBUG: "1"
+
+      # 5️⃣a List screenshots for debug
+      - name: List screenshots
+        run: ls -la results/screenshots || echo "No screenshots found"
 
       # 6️⃣ Process test metrics & attach GitHub URLs
       - name: Process Metrics
