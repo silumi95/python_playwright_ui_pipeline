@@ -74,3 +74,4 @@ def pytest_runtest_makereport(item, call):
                 call.screenshot_path = screenshot_path
             except Exception as e:
                 print(f"[ERROR] Failed to take screenshot: {e}")
+# test
