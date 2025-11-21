@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import Page
+
 @pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="LoginError")
 def test_invalid_credentials(page):
     """Login attempt with invalid credentials"""
@@ -14,7 +14,7 @@ def test_invalid_credentials(page):
 
 
 @pytest.mark.metadata(severity="Low", priority="P3", executed_by="Silumi", defect="None")
-def test_empty_fields(page: Page):
+def test_empty_fields(page):
     """Attempt login with empty username and password"""
 
     page.goto("https://www.saucedemo.com/", timeout=30000)
@@ -25,7 +25,7 @@ def test_empty_fields(page: Page):
 
 
 @pytest.mark.metadata(severity="High", priority="P1", executed_by="Silumi", defect="LockedUser")
-def test_locked_out_user(page: Page):
+def test_locked_out_user(page):
     """Locked-out user should not be able to log in"""
 
     page.goto("https://www.saucedemo.com/", timeout=30000)

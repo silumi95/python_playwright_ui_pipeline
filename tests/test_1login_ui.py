@@ -1,5 +1,5 @@
 import pytest
-from playwright.sync_api import Page
+
 
 @pytest.mark.metadata(severity="High", priority="P1", executed_by="Silumi", defect="None")
 def test_valid_login(page):
