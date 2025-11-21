@@ -20,7 +20,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # 2️⃣ Setup Python
       - name: Setup Python
@@ -28,13 +27,14 @@ jobs:
         with:
           python-version: 3.13
 
-      # 3️⃣ Install dependencies
+      # 3️⃣ Install dependencies & pytest-playwright
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest-json-report
-          playwright install
+          pip install pytest-playwright
+          playwright install  # installs browsers
 
       # 4️⃣ Ensure results folders exist
       - name: Create results folders
@@ -46,66 +46,9 @@ jobs:
       - name: Run Playwright UI Tests
         run: pytest --json-report --json-report-file=results/latest.json
 
-      # 6️⃣ Process test metrics & attach GitHub URLs for screenshots
+      # 6️⃣ Process test metrics & attach GitHub URLs
       - name: Process Metrics
-        run: |
-          python - <<'EOF'
-          import json, os, pandas as pd
-          from datetime import datetime
-
-          repo_user = os.getenv("GITHUB_REPOSITORY_OWNER", "USERNAME")
-          repo_name = os.getenv("GITHUB_REPOSITORY", "USERNAME/python_playwright_ui").split("/")[-1]
-          branch = "main"
-
-          results_dir = "results"
-          latest_json = os.path.join(results_dir, "latest.json")
-          build_number = os.getenv("GITHUB_RUN_NUMBER", "0")
-          exec_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
-
-          os.makedirs("data", exist_ok=True)
-
-          with open(latest_json, "r", encoding="utf-8") as f:
-              data = json.load(f)
-
-          rows = []
-          for test in data.get("tests", []):
-              nodeid = test.get("nodeid","Unknown Test")
-              outcome = test.get("outcome","unknown")
-              duration = test.get("call",{}).get("duration",0)
-              duration_ms = int(duration*1000)
-              error = ""
-              call = test.get("call",{})
-              if call.get("crash"):
-                  error = call["crash"].get("message","")
-              elif test.get("excinfo"):
-                  error = str(test.get("excinfo",""))
-
-              screenshot_path = call.get("screenshot_path","")
-              if screenshot_path:
-                  filename = os.path.basename(screenshot_path)
-                  screenshot_path = f"https://raw.githubusercontent.com/{repo_user}/{repo_name}/{branch}/results/screenshots/{filename}"
-              
-              rows.append({
-                  "build_number": int(build_number),
-                  "execution_time": exec_time,
-                  "name": nodeid,
-                  "status": outcome,
-                  "duration_ms": duration_ms,
-                  "error": error,
-                  "screenshot": screenshot_path
-              })
-
-          df = pd.DataFrame(rows)
-          processed_csv = os.path.join(results_dir, "processed_results.csv")
-          df.to_csv(processed_csv,index=False,encoding="utf-8-sig")
-
-          # Append to history.csv
-          history_csv = os.path.join("data","history.csv")
-          if os.path.exists(history_csv):
-              df_existing = pd.read_csv(history_csv)
-              df = pd.concat([df_existing, df], ignore_index=True)
-          df.to_csv(history_csv,index=False,encoding="utf-8-sig")
-          EOF
+        run: python process_metrics.py
 
       # 7️⃣ Commit CSVs + screenshots
       - name: Commit CSVs & Screenshots
