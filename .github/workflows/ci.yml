@@ -48,7 +48,7 @@ jobs:
 
       # 6️⃣ Process test metrics & attach GitHub URLs
       - name: Process Metrics
-        run: python process_metrics.py
+        run: python scripts/process_metrics.py
 
       # 7️⃣ Commit CSVs + screenshots
       - name: Commit CSVs & Screenshots
