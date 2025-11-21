@@ -1,7 +1,7 @@
 import pytest
 from playwright.sync_api import Page
 @pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="LoginError")
-def test_invalid_credentials(page: Page):
+def test_invalid_credentials(page):
     """Login attempt with invalid credentials"""
     
     page.goto("https://www.saucedemo.com/", timeout=30000)

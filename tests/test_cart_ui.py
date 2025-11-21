@@ -1,7 +1,7 @@
 import pytest
 from playwright.sync_api import Page
 @pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="None")
-def test_valid_login(page: Page):
+def test_valid_login(page):
     """Test adding one item to cart"""
 
     page.goto("https://www.saucedemo.com/", timeout=40000)
