@@ -1,0 +1,7 @@
+﻿build_number,execution_time,name,status,duration_ms,error,screenshot
+70,2025-11-22 12:15:18,tests/test_1login_ui.py::test_valid_login[chromium],passed,486,,
+70,2025-11-22 12:15:18,tests/test_cart_ui.py::test_valid_login[chromium],passed,330,,
+70,2025-11-22 12:15:18,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1221,,
+70,2025-11-22 12:15:18,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,271,,
+70,2025-11-22 12:15:18,tests/test_negative_ui.py::test_empty_fields[chromium],passed,239,,
+70,2025-11-22 12:15:18,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,284,,
