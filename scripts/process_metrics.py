@@ -64,12 +64,13 @@ for test in tests:
         error = "Test likely did not execute (environment issue)"
 
     # Screenshot path → GitHub raw URL
-    screenshot_path = call.get("screenshot_path", "")
-    if screenshot_path and os.path.exists(screenshot_path):
-        screenshot_filename = os.path.basename(screenshot_path)
-        screenshot_url = repo_url_base + screenshot_filename
-    else:
-        screenshot_url = ""
+screenshot_path = call.get("screenshot_path", "")
+if screenshot_path:
+    screenshot_filename = os.path.basename(screenshot_path)
+    screenshot_url = repo_url_base + screenshot_filename
+else:
+    screenshot_url = ""
+
 
     rows.append({
         "build_number": int(build_number),
