@@ -1,0 +1,2 @@
+﻿build_number,execution_time,name,status,duration_ms,error,screenshot
+77,2025-11-23 21:02:29,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,330,,
