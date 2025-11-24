@@ -63,13 +63,27 @@ for test in tests:
         outcome = "did not run"
         error = "Test likely did not execute (environment issue)"
 
-    # Screenshot path → GitHub raw URL
-    screenshot = call.get("screenshot_path", "")
+    # # Screenshot path → GitHub raw URL
+    # screenshot = call.get("screenshot_path", "")
+    # if screenshot:
+    #    screenshot_filename = os.path.basename(screenshot)
+    #    screenshot_url = repo_url_base + screenshot_filename
+    # else:
+    #    screenshot_url = ""
+
+    # Screenshot path → GitHub raw URL (extracted from longrepr)
+    longrepr = call.get("longrepr", "")
+    screenshot = ""
+
+    if longrepr and "SCREENSHOT:" in longrepr:
+        screenshot = longrepr.split("SCREENSHOT:")[1].strip()
+
     if screenshot:
-       screenshot_filename = os.path.basename(screenshot)
-       screenshot_url = repo_url_base + screenshot_filename
+        screenshot_filename = os.path.basename(screenshot)
+        screenshot_url = repo_url_base + screenshot_filename
     else:
-       screenshot_url = ""
+        screenshot_url = ""
+
 
 
     rows.append({
@@ -79,6 +93,7 @@ for test in tests:
         "status": outcome,
         "duration_ms": duration_ms,
         "error": error,
+        "longrepr": longrepr,
         "screenshot": screenshot_url
     })
 
