@@ -64,12 +64,12 @@ for test in tests:
         error = "Test likely did not execute (environment issue)"
 
     # Screenshot path → GitHub raw URL
-screenshot = call.get("screenshot_path", "")
-if screenshot:
-    screenshot_filename = os.path.basename(screenshot)
-    screenshot_url = repo_url_base + screenshot_filename
-else:
-    screenshot_url = ""
+    screenshot = call.get("screenshot_path", "")
+    if screenshot:
+       screenshot_filename = os.path.basename(screenshot)
+       screenshot_url = repo_url_base + screenshot_filename
+    else:
+       screenshot_url = ""
 
 
     rows.append({
