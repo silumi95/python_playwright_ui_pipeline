@@ -288,3 +288,14 @@ SCREENSHOT:D:\VS Code\python_playwright\results\screenshots\1763981806_tests_tes
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,310,,,
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_empty_fields[chromium],passed,310,,,
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,332,,,
+81,2025-11-24 11:01:32,tests/test_1login_ui.py::test_valid_login[chromium],failed,369,,https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO_NAME/main/results/screenshots/1763982089_tests_test_1login_ui.py_test_valid_login_chromium_.png,"tests/test_1login_ui.py:12: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1763982089_tests_test_1login_ui.py_test_valid_login_chromium_.png"
+81,2025-11-24 11:01:32,tests/test_cart_ui.py::test_valid_login[chromium],passed,332,,,
+81,2025-11-24 11:01:32,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1227,,,
+81,2025-11-24 11:01:32,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,270,,,
+81,2025-11-24 11:01:32,tests/test_negative_ui.py::test_empty_fields[chromium],passed,241,,,
+81,2025-11-24 11:01:32,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,245,,,
