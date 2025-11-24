@@ -288,3 +288,57 @@ SCREENSHOT:D:\VS Code\python_playwright\results\screenshots\1763981806_tests_tes
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,310,,,
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_empty_fields[chromium],passed,310,,,
 0,2025-11-24 10:57:58,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,332,,,
+0,2025-11-24 12:05:46,tests/test_1login_ui.py::test_valid_login[chromium],failed,3770,,https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1763985880_tests_test_1login_ui.py_test_valid_login_chromium_.png,"tests\test_1login_ui.py:7: in test_valid_login
+    page.goto(""https://www.saucedemo.com/"", timeout=30000)
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py:9019: in goto
+    self._sync(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py:555: in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py:153: in goto
+    await self._channel.send(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:69: in send
+    return await self._connection.wrap_api_call(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:559: in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+E   playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+E   Call log:
+E     - navigating to ""https://www.saucedemo.com/"", waiting until ""load""
+SCREENSHOT:D:\VS Code\python_playwright\results\screenshots\1763985880_tests_test_1login_ui.py_test_valid_login_chromium_.png"
+0,2025-11-24 12:05:46,tests/test_cart_ui.py::test_valid_login[chromium],failed,41,,https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1763985880_tests_test_cart_ui.py_test_valid_login_chromium_.png,"tests\test_cart_ui.py:7: in test_valid_login
+    page.goto(""https://www.saucedemo.com/"", timeout=40000)
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py:9019: in goto
+    self._sync(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py:555: in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py:153: in goto
+    await self._channel.send(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:69: in send
+    return await self._connection.wrap_api_call(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:559: in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+E   playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+E   Call log:
+E     - navigating to ""https://www.saucedemo.com/"", waiting until ""load""
+SCREENSHOT:D:\VS Code\python_playwright\results\screenshots\1763985880_tests_test_cart_ui.py_test_valid_login_chromium_.png"
+0,2025-11-24 12:05:46,tests/test_logout_ui.py::test_logout_after_login[chromium],failed,44,,https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1763985881_tests_test_logout_ui.py_test_logout_after_login_chromium_.png,"tests\test_logout_ui.py:6: in test_logout_after_login
+    page.goto(""https://www.saucedemo.com/"", timeout=30000)
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py:9019: in goto
+    self._sync(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py:555: in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py:153: in goto
+    await self._channel.send(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:69: in send
+    return await self._connection.wrap_api_call(
+C:\Users\ASUS\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py:559: in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+E   playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+E   Call log:
+E     - navigating to ""https://www.saucedemo.com/"", waiting until ""load""
+SCREENSHOT:D:\VS Code\python_playwright\results\screenshots\1763985881_tests_test_logout_ui.py_test_logout_after_login_chromium_.png"
+0,2025-11-24 12:05:46,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,601,,,
+0,2025-11-24 12:05:46,tests/test_negative_ui.py::test_empty_fields[chromium],passed,407,,,
+0,2025-11-24 12:05:46,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,445,,,

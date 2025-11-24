@@ -13,10 +13,11 @@ build_number = os.getenv("GITHUB_RUN_NUMBER", "0")
 execution_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
 
 # GitHub repository info (update these)
-GITHUB_USER = "YOUR_USERNAME"
-GITHUB_REPO = "YOUR_REPO_NAME"
+GITHUB_USER = "silumi95"
+GITHUB_REPO = "python_playwright_ui_pipeline"
 GITHUB_BRANCH = "main"  # or your branch
 repo_url_base = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/{GITHUB_BRANCH}/results/screenshots/"
+
 
 # Ensure directories exist
 os.makedirs(results_dir, exist_ok=True)
