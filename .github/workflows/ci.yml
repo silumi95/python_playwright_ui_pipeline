@@ -88,7 +88,16 @@ jobs:
         run: |
          echo "Listing screenshot dir:"
          ls -la results/screenshots || echo "No screenshots folder found"
+      - name: Copy history.csv to docs (GitHub Pages)
+        run: |
+          mkdir -p docs
+          cp results/history.csv docs/history.csv
 
+      - name: Publish GitHub Pages file
+        run: |
+          git add docs/history.csv
+          git commit -m "Publish updated history.csv to GitHub Pages" || echo "No changes"
+          git push
 
 
 
