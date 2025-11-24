@@ -64,14 +64,6 @@ for test in tests:
         outcome = "did not run"
         error = "Test likely did not execute (environment issue)"
 
-    # # Screenshot path → GitHub raw URL
-    # screenshot = call.get("screenshot_path", "")
-    # if screenshot:
-    #    screenshot_filename = os.path.basename(screenshot)
-    #    screenshot_url = repo_url_base + screenshot_filename
-    # else:
-    #    screenshot_url = ""
-
     # Screenshot path → GitHub raw URL (extracted from longrepr)
     longrepr = call.get("longrepr", "")
     screenshot = ""
