@@ -1,0 +1,12 @@
+﻿build_number,execution_time,name,status,duration_ms,error,longrepr,screenshot
+95,2025-11-26 18:13:15,tests/test_1login_ui.py::test_valid_login[chromium],failed,627,,"tests/test_1login_ui.py:12: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1764180791_tests_test_1login_ui.py_test_valid_login_chromium_.png",https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1764180791_tests_test_1login_ui.py_test_valid_login_chromium_.png
+95,2025-11-26 18:13:15,tests/test_cart_ui.py::test_valid_login[chromium],passed,496,,,
+95,2025-11-26 18:13:15,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1368,,,
+95,2025-11-26 18:13:15,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,380,,,
+95,2025-11-26 18:13:15,tests/test_negative_ui.py::test_empty_fields[chromium],passed,357,,,
+95,2025-11-26 18:13:15,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,376,,,
