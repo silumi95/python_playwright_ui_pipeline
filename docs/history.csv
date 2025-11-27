@@ -892,9 +892,21 @@ E   AssertionError: Login failed
 E   assert 'inventory' in 'https://www.saucedemo.com/'
 E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
 METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""None""}
-SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1764224175_tests_test_1login_ui.py_test_valid_login_chromium_.png",High,P1,Silumi,None
-98,2025-11-27 06:16:18,tests/test_cart_ui.py::test_valid_login[chromium],passed,397,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,None
-98,2025-11-27 06:16:18,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1303,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,None
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1764224175_tests_test_1login_ui.py_test_valid_login_chromium_.png",High,P1,Silumi,
+98,2025-11-27 06:16:18,tests/test_cart_ui.py::test_valid_login[chromium],passed,397,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,
+98,2025-11-27 06:16:18,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1303,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,
 98,2025-11-27 06:16:18,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,340,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""LoginError""}",Medium,P2,Silumi,LoginError
-98,2025-11-27 06:16:18,tests/test_negative_ui.py::test_empty_fields[chromium],passed,321,,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Low,P3,Silumi,None
+98,2025-11-27 06:16:18,tests/test_negative_ui.py::test_empty_fields[chromium],passed,321,,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Low,P3,Silumi,
 98,2025-11-27 06:16:18,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,334,,,"METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""LockedUser""}",High,P1,Silumi,LockedUser
+99,2025-11-27 12:18:12,tests/test_1login_ui.py::test_valid_login[chromium],failed,297,,https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1764245888_tests_test_1login_ui.py_test_valid_login_chromium_.png,"tests/test_1login_ui.py:23: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""None""}
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1764245888_tests_test_1login_ui.py_test_valid_login_chromium_.png",High,P1,Silumi,None
+99,2025-11-27 12:18:12,tests/test_cart_ui.py::test_valid_login[chromium],passed,332,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,None
+99,2025-11-27 12:18:12,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1302,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Medium,P2,Silumi,None
+99,2025-11-27 12:18:12,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,260,,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""LoginError""}",Medium,P2,Silumi,LoginError
+99,2025-11-27 12:18:12,tests/test_negative_ui.py::test_empty_fields[chromium],passed,235,,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",Low,P3,Silumi,None
+99,2025-11-27 12:18:12,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,265,,,"METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""LockedUser""}",High,P1,Silumi,LockedUser
