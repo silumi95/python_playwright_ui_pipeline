@@ -1,0 +1,13 @@
+﻿build_number,execution_time,name,status,duration_ms,severity,priority,executed_by,defect,error,longrepr,screenshot
+106,2025-11-29 06:14:05,tests/test_1login_ui.py::test_valid_login[chromium],failed,374,High,P1,Silumi,None,,"tests/test_1login_ui.py:23: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""None""}
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1764396841_tests_test_1login_ui.py_test_valid_login_chromium_.png",https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1764396841_tests_test_1login_ui.py_test_valid_login_chromium_.png
+106,2025-11-29 06:14:05,tests/test_cart_ui.py::test_valid_login[chromium],passed,314,Medium,P2,Silumi,None,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",
+106,2025-11-29 06:14:05,tests/test_logout_ui.py::test_logout_after_login[chromium],passed,1212,Medium,P2,Silumi,None,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",
+106,2025-11-29 06:14:05,tests/test_negative_ui.py::test_invalid_credentials[chromium],passed,262,Medium,P2,Silumi,LoginError,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""LoginError""}",
+106,2025-11-29 06:14:05,tests/test_negative_ui.py::test_empty_fields[chromium],passed,226,Low,P3,Silumi,None,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None""}",
+106,2025-11-29 06:14:05,tests/test_negative_ui.py::test_locked_out_user[chromium],passed,337,High,P1,Silumi,LockedUser,,"METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""LockedUser""}",
