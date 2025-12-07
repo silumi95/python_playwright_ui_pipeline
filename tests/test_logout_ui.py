@@ -1,6 +1,12 @@
 import pytest
 
-@pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="None")
+@pytest.mark.metadata(
+    severity="Medium", 
+    priority="P2", 
+    executed_by="Silumi", 
+    defect="None",
+    description="Validate user can logout successfully"
+    )
 def test_logout_after_login(page):
   """Test logout functionality"""
   page.goto("https://www.saucedemo.com/", timeout=30000)

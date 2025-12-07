@@ -95,7 +95,7 @@ for test in tests:
     rows.append({
         "build_number": int(build_number),
         "execution_time": execution_time,
-        "name": nodeid,
+        "name": metadata.get("description", nodeid),
         "status": outcome,
         "duration_ms": duration_ms,
         "severity": severity,

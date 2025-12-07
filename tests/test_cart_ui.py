@@ -1,6 +1,12 @@
 import pytest
 
-@pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="None")
+@pytest.mark.metadata(
+        severity="Medium", 
+        priority="P2", 
+        executed_by="Silumi", 
+        defect="None",
+        description="Validate user can add one item to cart successfully"
+        )
 def test_valid_login(page):
     """Test adding one item to cart"""
 

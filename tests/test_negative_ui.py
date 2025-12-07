@@ -1,6 +1,11 @@
 import pytest
 
-@pytest.mark.metadata(severity="Medium", priority="P2", executed_by="Silumi", defect="LoginError")
+@pytest.mark.metadata(
+        severity="Medium", 
+        priority="P2", 
+        executed_by="Silumi", 
+        defect="LoginError",
+        description="Validate user can't login with invalid credentials")
 def test_invalid_credentials(page):
     """Login attempt with invalid credentials"""
     
@@ -13,7 +18,13 @@ def test_invalid_credentials(page):
       
 
 
-@pytest.mark.metadata(severity="Low", priority="P3", executed_by="Silumi", defect="None")
+@pytest.mark.metadata(
+        severity="Low", 
+        priority="P3", 
+        executed_by="Silumi", 
+        defect="None",
+        description="Validate user can't login with empty username and password"
+        )
 def test_empty_fields(page):
     """Attempt login with empty username and password"""
 
@@ -24,7 +35,13 @@ def test_empty_fields(page):
         
 
 
-@pytest.mark.metadata(severity="High", priority="P1", executed_by="Silumi", defect="LockedUser")
+@pytest.mark.metadata(
+        severity="High", 
+        priority="P1", 
+        executed_by="Silumi", 
+        defect="LockedUser",
+        description="Validate Locked-out user can't login")
+
 def test_locked_out_user(page):
     """Locked-out user should not be able to log in"""
 

@@ -16,7 +16,8 @@ def pytest_runtest_makereport(item, call):
             "severity": metadata_marker.kwargs.get("severity", ""),
             "priority": metadata_marker.kwargs.get("priority", ""),
             "executed_by": metadata_marker.kwargs.get("executed_by", ""),
-            "defect": metadata_marker.kwargs.get("defect", "")
+            "defect": metadata_marker.kwargs.get("defect", ""),
+            "description": metadata_marker.kwargs.get("description", "")
         }
 
     # Append metadata into longrepr so it is written into JSON
