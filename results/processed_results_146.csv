@@ -1,0 +1,30 @@
+﻿build_number,execution_time,name,status,duration_ms,severity,priority,executed_by,defect,error,longrepr,screenshot
+146,2025-12-09 00:02:39,Validate user can login successfully,failed,464,High,P1,Silumi,None,,"tests/test_1login_ui.py:16: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can login successfully""}
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1765238526_tests_test_1login_ui.py_test_valid_login_chromium_.png",https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1765238526_tests_test_1login_ui.py_test_valid_login_chromium_.png
+146,2025-12-09 00:02:39,Validate user can add one item to cart successfully,passed,408,Medium,P2,Silumi,None,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can add one item to cart successfully""}",
+146,2025-12-09 00:02:39,Validate user can logout successfully,failed,30327,Medium,P2,Silumi,None,,"tests/test_logout_ui.py:15: in test_logout_after_login
+    page.click(""#login-button1"")
+/opt/hostedtoolcache/Python/3.13.9/x64/lib/python3.13/site-packages/playwright/sync_api/_generated.py:9927: in click
+    self._sync(
+/opt/hostedtoolcache/Python/3.13.9/x64/lib/python3.13/site-packages/playwright/_impl/_page.py:857: in click
+    return await self._main_frame.click(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/hostedtoolcache/Python/3.13.9/x64/lib/python3.13/site-packages/playwright/_impl/_frame.py:549: in click
+    await self._channel.send(""click"", self._timeout, locals_to_params(locals()))
+/opt/hostedtoolcache/Python/3.13.9/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:69: in send
+    return await self._connection.wrap_api_call(
+/opt/hostedtoolcache/Python/3.13.9/x64/lib/python3.13/site-packages/playwright/_impl/_connection.py:559: in wrap_api_call
+    raise rewrite_error(error, f""{parsed_st['apiName']}: {error}"") from None
+E   playwright._impl._errors.TimeoutError: Page.click: Timeout 30000ms exceeded.
+E   Call log:
+E     - waiting for locator(""#login-button1"")
+METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can logout successfully""}
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1765238557_tests_test_logout_ui.py_test_logout_after_login_chromium_.png",https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1765238557_tests_test_logout_ui.py_test_logout_after_login_chromium_.png
+146,2025-12-09 00:02:39,Validate user can't login with invalid credentials,passed,374,Medium,P2,Silumi,LoginError,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""LoginError"", ""description"": ""Validate user can't login with invalid credentials""}",
+146,2025-12-09 00:02:39,Validate user can't login with empty username and password,passed,352,Low,P3,Silumi,None,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can't login with empty username and password""}",
+146,2025-12-09 00:02:39,Validate Locked-out user can't login,passed,379,High,P1,Silumi,LockedUser,,"METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""LockedUser"", ""description"": ""Validate Locked-out user can't login""}",
