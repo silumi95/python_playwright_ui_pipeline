@@ -1,0 +1,13 @@
+﻿build_number,execution_time,name,status,duration_ms,severity,priority,executed_by,defect,error,longrepr,screenshot
+263,2026-01-06 18:15:17,Validate user can login successfully,failed,373,High,P1,Silumi,None,,"tests/test_1login_ui.py:16: in test_valid_login
+    assert ""inventory"" in page.url, ""Login failed""
+E   AssertionError: Login failed
+E   assert 'inventory' in 'https://www.saucedemo.com/'
+E    +  where 'https://www.saucedemo.com/' = <Page url='https://www.saucedemo.com/'>.url
+METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can login successfully""}
+SCREENSHOT:/home/runner/work/python_playwright_ui_pipeline/python_playwright_ui_pipeline/results/screenshots/1767723314_tests_test_1login_ui.py_test_valid_login_chromium_.png",https://raw.githubusercontent.com/silumi95/python_playwright_ui_pipeline/main/results/screenshots/1767723314_tests_test_1login_ui.py_test_valid_login_chromium_.png
+263,2026-01-06 18:15:17,Validate user can add one item to cart successfully,passed,366,Medium,P2,Silumi,None,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can add one item to cart successfully""}",
+263,2026-01-06 18:15:17,Validate user can logout successfully,passed,1277,Medium,P2,Silumi,None,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can logout successfully""}",
+263,2026-01-06 18:15:17,Validate user can't login with invalid credentials,passed,281,Medium,P2,Silumi,LoginError,,"METADATA:{""severity"": ""Medium"", ""priority"": ""P2"", ""executed_by"": ""Silumi"", ""defect"": ""LoginError"", ""description"": ""Validate user can't login with invalid credentials""}",
+263,2026-01-06 18:15:17,Validate user can't login with empty username and password,passed,262,Low,P3,Silumi,None,,"METADATA:{""severity"": ""Low"", ""priority"": ""P3"", ""executed_by"": ""Silumi"", ""defect"": ""None"", ""description"": ""Validate user can't login with empty username and password""}",
+263,2026-01-06 18:15:17,Validate Locked-out user can't login,passed,295,High,P1,Silumi,LockedUser,,"METADATA:{""severity"": ""High"", ""priority"": ""P1"", ""executed_by"": ""Silumi"", ""defect"": ""LockedUser"", ""description"": ""Validate Locked-out user can't login""}",
